@@ -18,7 +18,7 @@ class User extends CI_Controller {
 	   else{
 		$this->load->model('user_model');
 		$formArray=array();
-		$formArray['name'] = $this->input->post('first_name');
+		$formArray['name'] = $this->input->post('name');
 		$formArray['date'] =$this->input->post('date');
 		$formArray['topic'] = $this->input->post('topic');
 		$formArray['youridea'] = $this->input->post('youridea');

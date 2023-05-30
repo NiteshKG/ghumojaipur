@@ -50,10 +50,10 @@
                                     ?>
                                     <form action="<?php echo base_url().'index.php/admin/login/login_action/'; ?>" method="post" class="user">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control form-control-user"
+                                            <input type="email" name="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
                                                 placeholder="Enter Email Address...">
-                                                <label for=""><?php echo form_error('name')? form_error('name') : '' ;?></label>
+                                                <label for=""><?php echo form_error('email')? form_error('email') : '' ;?></label>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
@@ -76,7 +76,7 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
+                                        <a class="small" href="<?= base_url().'index.php/admin/login/register/' ?>">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>

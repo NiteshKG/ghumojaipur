@@ -16,12 +16,12 @@ public function index(){
 }
 
 public function login_action() {
-    $this->form_validation->set_rules('name', 'name', 'required');
+    $this->form_validation->set_rules('email' ,'email', 'required');
     $this->form_validation->set_rules('password', 'Password', 'required');
     if($this->form_validation->run()){ 
       
-        $data['name'] = $this->input->post('name');
-        $data['password'] = $this->input->post('password');
+        $data['email'] = $this->input->post('email');
+        $data['password'] = md5($this->input->post('password'));
         $login = $this->user_model->login($data);
    
     if ($login) { 
@@ -32,7 +32,7 @@ public function login_action() {
         );
         $this->session->set_userdata($userdata);
         
-        redirect(base_url().'index.php/home/dashboard/');
+        redirect(base_url().'index.php/admin/dashboard/index/');
     } else {
        
         $this->session->set_flashdata('msg', 'Invalid username or password');
@@ -46,8 +46,37 @@ else{
 }
 
 }
+public function register(){
+    $this->load->view('admin/register');
+}
 
+public function register_action()
+	{
+       $this->form_validation->set_rules('firstname' , 'First name' , 'required');
+	   $this->form_validation->set_rules('lastname' , 'Last name' , 'required');
+	   $this->form_validation->set_rules('email' , 'Email' , 'required');
+	   $this->form_validation->set_rules('password' , 'Password' , 'required');
+	   
 
+       if($this->form_validation->run() == false){
+		$this->load->view('admin/register/');
+	   }
+	   else{
+		$this->load->model('user_model');
+		$formArray=array();
+		$formArray['firstname'] = $this->input->post('firstname');
+		$formArray['lastname'] =$this->input->post('lastname');
+		$formArray['email'] = $this->input->post('email');
+		$formArray['password'] = md5($this->input->post('password'));
+		
+		
+
+		$this->user_model->register($formArray);
+
+		$this->session->set_flashdata('msg','Your account has been successfully created');
+		redirect(base_url().'index.php/admin/login/index/');
+	   }
+	}
 
 }
 

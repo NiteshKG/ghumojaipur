@@ -17,6 +17,10 @@ public function contact(){
    $this->load->view('contact');
 }
 
+public function body(){
+   $this->load->view('body');
+}
+
 }
 
 

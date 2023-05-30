@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo base_url().'ghumojaipur.css' ?>">
-    <title>City Updates</title>
+    <title>join our team</title>
 </head>
 <style>
     .error-label {
@@ -41,7 +41,7 @@
         </div>
     </nav>
 
-	<div class="container">
+  <div class="container">
   <?php
       $msg = $this->session->flashdata('msg');
 	  if($msg!=""){
@@ -55,16 +55,17 @@
 
         <!-------------------------------- </Form> -------------------------------->
 
-        <form class="formdiv" method="post" action="<?php echo base_url().'index.php/user/update/'; ?>">
+        <form class="formdiv" method="post" action="<?php echo base_url().'index.php/user/workwithus/'; ?>">
             <div class="form-group frmhdngdiv">
-                <h4>Share City Updates with Us</h4>
+                <h4>Join Our Team</h4>
+                <p class="text-center" style="padding: 0px 150px ;">Emphasize that the form is an opportunity for users to join our team or collaborate with us.</p>
             </div>
 
             <!-- Name Section -->
 
             <div class="form-group wrth90 mg-auto">
                 <label for="exampleInputName">Name</label>
-                <input type="text" class="form-control " value="<?php echo set_value(field : 'name') ?>" aria-describedby="nameHelp" name="name"
+                <input type="text" class="form-control "   value="<?php echo set_value(field : 'name') ?>" name="name" aria-describedby="nameHelp" 
                     placeholder="Enter your name">
                     <label for="" class="error-label"><?php echo form_error('name')? form_error('name') : '' ;?></label>
             </div>
@@ -73,32 +74,38 @@
 
             <div class="form-group wrth90 mg-auto">
                 <label for="phone">Phone:</label>
-                <input type="tel" class="form-control" value="<?php echo set_value(field : 'phone') ?>" name="phone" placeholder="Enter your phone number">
+                <input type="text" class="form-control"  value="<?php echo set_value(field : 'name') ?>" name="phone" placeholder="Enter your phone number">
                 <label for="" class="error-label"><?php echo form_error('phone')? form_error('phone') : '' ;?></label>
             </div>
 
-            <!-- Title Section -->
+            <!-- Intrest Section -->
 
             <div class="form-group wrth90 mg-auto">
-                <label for="title">Title:</label>
-                <input type="text" class="form-control"  value="<?php echo set_value(field : 'title') ?>" name="title" placeholder="Enter the update title">
-                <label for="" class="error-label"><?php echo form_error('title')? form_error('title') : '' ;?></label>
+                <label for="areaOfInterest">Area of Interest:</label>
+                <select class="form-control"  value="<?php echo set_value(field : 'areaOfInterest') ?>"  name="areaOfInterest">
+                  <option value="">Select an Area of Interest</option>
+                  <option value="EventPlanning">Event Planning and Coordination</option>
+                  <option value="Trekking">Trekking and Outdoor Adventures</option>
+                  <option value="LiveMusic">Live Music Performances</option>
+                  <option value="Art activity">Art and Culture Promotion</option>
+                  <option value="Social Media">Social Media Marketing and Promotion</option>
+                  <option value="Photography">Photography and Videography</option>
+                  <option value="Coordinator">Volunteer Management and Coordination</option>
+                  <option value="Designing">Graphic Design and Visual Content Creation</option>
+                  <option value="Public Relations">Public Relations and Communications</option>
+                  <option value="Sponsorship">Sponsorship and Fundraising</option>
+                  <!-- Add more options as per your needs -->
+                </select>
+                <label for="" class="error-label"><?php echo form_error('areaOfInterest')? form_error('areaOfInterest') : '' ;?></label>
               </div>
 
-            <!-- Description Section -->
+            <!-- Message section -->
 
             <div class="form-group wrth90 mg-auto">
-                <label for="description">Description:</label>
-                <textarea class="form-control" name="description" value="<?php echo set_value(field : 'description') ?>" rows="5" placeholder="Enter the update description"></textarea>
-                <label for="" class="error-label"><?php echo form_error('description')? form_error('description') : '' ;?></label>
-              </div>
-
-            <!-- Upload Image or videos section -->
-
-            <div class="form-group wrth90 mg-auto">
-                <label for="image">Upload Image or videos</label>
-                <input type="file" class="form-control-file" name="image">
-              </div>
+                <label for="message">Message:</label>
+                <textarea class="form-control" name="message" value="<?php echo set_value(field : 'message') ?>" rows="5" placeholder="Enter a message"></textarea>
+                <label for="" class="error-label"><?php echo form_error('message')? form_error('message') : '' ;?></label>
+            </div>
 
             <button>Submit</button>
         </form>

@@ -7,9 +7,9 @@ class User extends CI_Controller {
 	public function takeidea()
 	{
        $this->form_validation->set_rules('name' , 'Name' , 'required');
-	   $this->form_validation->set_rules('date' , 'Date' , 'required');
-	   $this->form_validation->set_rules('topic' , 'Topic' , 'required');
-	   $this->form_validation->set_rules('youridea' , 'Your idea' , 'required');
+	   $this->form_validation->set_rules('phone' , 'Phone' , 'required');
+	   $this->form_validation->set_rules('title' , 'Title' , 'required');
+	   $this->form_validation->set_rules('description' , 'Idea description' , 'required');
 	   
 
        if($this->form_validation->run() == false){
@@ -18,10 +18,10 @@ class User extends CI_Controller {
 	   else{
 		$this->load->model('user_model');
 		$formArray=array();
-		$formArray['name'] = $this->input->post('name');
-		$formArray['date'] =$this->input->post('date');
-		$formArray['topic'] = $this->input->post('topic');
-		$formArray['youridea'] = $this->input->post('youridea');
+		$formArray['Name'] = $this->input->post('name');
+		$formArray['Phone'] =$this->input->post('phone');
+		$formArray['Title'] = $this->input->post('title');
+		$formArray['IdeaDescription'] = $this->input->post('description');
 		
 		
 
@@ -35,23 +35,38 @@ class User extends CI_Controller {
 	public function update()
 	{
        $this->form_validation->set_rules('name' , 'Name' , 'required');
-	   $this->form_validation->set_rules('date' , 'Date' , 'required');
-	   $this->form_validation->set_rules('topic' , 'Topic' , 'required');
-	   $this->form_validation->set_rules('abouttopic' , 'About Topic' , 'required');
-	   
+	   $this->form_validation->set_rules('phone' , 'Phone' , 'required');
+	   $this->form_validation->set_rules('title' , 'Title' , 'required');
+	   $this->form_validation->set_rules('description' , 'Description' , 'required');
+	   $this->form_validation->set_rules('image' , 'image' );
 
        if($this->form_validation->run() == false){
 		$this->load->view('forms/update');
 	   }
 	   else{
-		$this->load->model('user_model');
+        $this->load->model('user_model');
+		$config['upload_path'] = './assets/images/';
+		$config['allowed_types'] = 'jpg|jpeg|png|gif';
+		$config['max_size'] = 2048; // 2MB
+		$this->load->library('upload', $config);
+
+		if ($this->upload->do_upload('image')) {
+			$uploadedData = $this->upload->data();
+			$imagePath = $uploadedData['file_name'];
+		} else {
+			$imagePath = ''; // No image uploaded or upload failed
+		}
+		
+		
+        
+
 		$formArray=array();
-		$formArray['name'] = $this->input->post('name');
-		$formArray['date'] =$this->input->post('date');
-		$formArray['topic'] = $this->input->post('topic');
-		$formArray['abouttopic'] = $this->input->post('abouttopic');
+		$formArray['Name'] = $this->input->post('name');
+		$formArray['Phone'] =$this->input->post('phone');
+		$formArray['Title'] = $this->input->post('title');
+		$formArray['Description'] = $this->input->post('description');
 		
-		
+		$formArray['Images/Videos'] = $imagePath;
 
 		$this->user_model->update($formArray);
 
@@ -60,31 +75,33 @@ class User extends CI_Controller {
 	   }
 	}
 
-	public function work()
+	public function workwithus()
 	{
        $this->form_validation->set_rules('name' , 'Name' , 'required');
-	   $this->form_validation->set_rules('mobile' , 'mobile' , 'required');
-	   $this->form_validation->set_rules('profession' , 'Profession' , 'required');
-	   $this->form_validation->set_rules('about' , 'About' , 'required');
+	   $this->form_validation->set_rules('phone' , 'Phone' , 'required');
+	   $this->form_validation->set_rules('areaOfInterest' , 'Area of Interest' , 'required');
+	   $this->form_validation->set_rules('message' , 'Message' , 'required');
+	  
 	   
 
        if($this->form_validation->run() == false){
-		$this->load->view('forms/work');
+		$this->load->view('forms/workwithus');
 	   }
 	   else{
 		$this->load->model('user_model');
 		$formArray=array();
-		$formArray['name'] = $this->input->post('name');
-		$formArray['mobile'] =$this->input->post('mobile');
-		$formArray['profession'] = $this->input->post('profession');
-		$formArray['about'] = $this->input->post('about');
+		$formArray['name'] = $this->input->post('name');	
+		$formArray['phone'] =$this->input->post('phone');
+		$formArray['Interest'] =$this->input->post('areaOfInterest');
+		$formArray['message'] =$this->input->post('message');
+		$formArray['date'] = date('Y-m-d');
 		
 		
 
 		$this->user_model->work($formArray);
 
 		$this->session->set_flashdata('msg','Your details has been successfully saved');
-		redirect(base_url().'index.php/user/work/');
+		redirect(base_url().'index.php/user/workwithus/');
 	   }
 	}
 }

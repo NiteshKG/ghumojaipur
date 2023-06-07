@@ -50,10 +50,12 @@
 
 
     <div class="container">
-    <h1>Welcome to ghumojaipur portal</h1>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-            <div class="shadow p-3 mb-5 bg-white rounded">
+    <div class="portal ">
+    <h3 class="mt-4" style="text-align:center;">Welcome to ghumojaipur portal</h3>
+    </div>
+    <div class="row " >
+        <div class="ml-5" style="display:block;">
+            <div class="shadow p-3 mb-5 bg-white rounded" style="text-align:center;">
                 <button class="btn btn-primary" style="background-color: #ff4b6c;">
                     <a href="<?= base_url().'index.php/user/takeidea/' ?>" style="color: white; text-decoration: none;">
                         Click here to give us an idea

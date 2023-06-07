@@ -1,13 +1,14 @@
 <?php   
 class Home extends CI_Controller{
 
- public function home(){
+
+public function index(){
+      $this->load->view('dashboard');
+}
+public function home(){
     $this->load->view('common/header');
     $this->load->view('body');
     $this->load->view('common/footer');
- }
-public function dashboard(){
-   $this->load->view('dashboard');
 }
 
 public function learnmore(){

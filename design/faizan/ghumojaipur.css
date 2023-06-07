@@ -23,6 +23,13 @@
     margin:auto;
     box-shadow: #000000 0px 0px 5px 0px;
 }
+@media only screen and (max-width:1200px){
+    .formdiv{
+        width: 70%!important;
+        margin:auto;
+        box-shadow: #3a3a3a 0px 0px 5px 0px;
+    }
+}
 .formdiv h4{
     text-align:center;
     color:#FF4B6C;

@@ -16,32 +16,9 @@
 }
 .navbar a{
     color:white;
-    font-weight: bold;
+    font-weight: normal;
 }
-.formdiv{
-    width: 70%!important;
-    margin:auto;
-    box-shadow: #000000 0px 0px 5px 0px;
-}
-.formdiv h4{
-    text-align:center;
-    color:#FF4B6C;
-    padding-top: 20px;
-}
-.formdiv label{
-    margin-top: 20px;
-    margin-bottom:0px
-}
-.formdiv button{
-    width:20%;
-    border-radius:3px;
-    border:none;
-    margin:30px 40%;
-    background-color:#ff4b6c;
-    color:white;
-    padding: 5px;
-    font-size: 15px;
-}
+
 .undrstandingtext{
     text-align:center;
     font-size: 30px;

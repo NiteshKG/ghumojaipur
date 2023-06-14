@@ -7,161 +7,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="<?php echo base_url().'ghumojaipur.css' ?>">
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/') . 'ghumojaipur.css?v=' . rand() ?>">
     <title>Idea Sharing Form</title>
 </head>
 <style>
-.error-label {
-  color: red;
-}
+    .error-label {
+        color: red;
+    }
 </style>
+
 <body>
     <!-- <header -->
     <nav class="navbar navbar-expand-lg  navbar-dark" style="background-color:#ff4b6c; width:100%;">
-            <img src="<?php echo base_url().'assets/images/img.png' ?>" class=" " style="width:10rem;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link mx-3" style="color:white;" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-3" style="color:white;"href="#">Forts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-3" style="color:white;"href="#">Shopping</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" style="color:white;"href="#">Transporation</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>   
+        <img src="<?php echo base_url() . 'assets/images/img.png' ?>" class=" " style="width:10rem;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-3" style="color:white;" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3" style="color:white;" href="#">Forts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-3" style="color:white;" href="#">Shopping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-2" style="color:white;" href="#">Transporation</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-	<div class="container">
-  <?php
-      $msg = $this->session->flashdata('msg');
-	  if($msg!=""){
-		echo "<div class='alert alert-success'>$msg</div>";
-	  }
+    <div class="container">
+        <?php
+        $msg = $this->session->flashdata('msg');
+        if ($msg != "") {
+            echo "<div class='alert alert-success'>$msg</div>";
+        }
 
-   ?>
-  </div>
+        ?>
+    </div>
 
     <div class="container my-5 ">
 
         <!-------------------------------- </Form> -------------------------------->
 
-        <form  class="formdiv mg-auto" method="post" action="<?php echo base_url().'index.php/user/takeidea/'; ?>" >
+        <form class="formdiv mg-auto " method="post" action="<?php echo base_url() . 'index.php/user/takeidea/'; ?>">
             <div class="form-group pt-3 ">
-            <h4 style="text-align:center " ><u style="text-decoration-color:#ff4b6c;">Give Us A Best Idea</u></h4>
+                <h4 style="text-align:center "><u style="text-decoration-color:#ff4b6c;">Give Us A Best Idea</u></h4>
             </div>
 
             <!-- Name Section -->
 
             <div class="form-group wrth90 mg-auto">
                 <label for="exampleInputName">Name</label>
-                <input type="text" class="form-control " value="<?php echo set_value(field : 'name') ?>"  name="name"
+                <input type="text" class="form-control " value="<?php echo set_value('name') ?>" name="name"
                     placeholder="Enter your name">
-                    <label for="" class="error-label"><?php echo form_error('name')? form_error('name') : '' ;?></label>
+                <label for="" class="error-label">
+                    <?php echo form_error('name') ? form_error('name') : ''; ?>
+                </label>
             </div>
 
             <!-- Phone Section -->
 
             <div class="form-group wrth90 mg-auto">
                 <label for="phone">Phone:</label>
-                <input type="tel" class="form-control" value="<?php echo set_value(field : 'phone') ?>" name="phone" placeholder="Enter your phone number">
-                <label for="" class="error-label"><?php echo form_error('phone')? form_error('phone') : '' ;?></label>
+                <input type="tel" class="form-control" value="<?php echo set_value('phone') ?>" name="phone"
+                    placeholder="Enter your phone number">
+                <label for="" class="error-label">
+                    <?php echo form_error('phone') ? form_error('phone') : ''; ?>
+                </label>
             </div>
 
             <!-- Idea Title section -->
 
             <div class="form-group wrth90 mg-auto">
                 <label for="ideaTitle">Idea Title:</label>
-                <input type="text" class="form-control" name="title" value="<?php echo set_value(field : 'title') ?>" placeholder="Enter the idea title">
-                <label for="" class="error-label"><?php echo form_error('title')? form_error('title') : '' ;?></label>
+                <input type="text" class="form-control" name="title" value="<?php echo set_value('title') ?>"
+                    placeholder="Enter the idea title">
+                <label for="" class="error-label">
+                    <?php echo form_error('title') ? form_error('title') : ''; ?>
+                </label>
             </div>
 
             <!-- Description section -->
 
             <div class="form-group wrth90 mg-auto">
                 <label for="ideaDescription">Describe your idea:</label>
-                <textarea class="form-control" name="description"  value="<?php echo set_value(field : 'description') ?>" rows="5" placeholder="Write here"></textarea>
-                <label for="" class="error-label"><?php echo form_error('description')? form_error('description') : '' ;?></label>
+                <textarea class="form-control" name="description" value="<?php echo set_value('description') ?>"
+                    rows="5" placeholder="Write here"></textarea>
+                <label for="" class="error-label">
+                    <?php echo form_error('description') ? form_error('description') : ''; ?>
+                </label>
             </div>
 
             <div class="mt-3 mb-3 pb-3" style="text-align:center;">
-             <input type="submit" name="submit" value="submit" style="width:20%;  background-color:#ff4b6c; color:white; " ></div>
+                <input type="submit" name="submit" value="submit"
+                    style="width:20%;  background-color:#ff4b6c; color:white; ">
+            </div>
         </form>
 
     </div>
 
-    <div class="container">
 
-        <div>
-        <h2 style="text-align:center" class="mt-5"><u style="text-decoration-color:#ff4b6c;">Let's Understant This</u></h2>
-        </div>
 
-        <div class="ditalis mt-5 lefttextdiv">
-            <div class="about-form lefttext">
+    <div>
+        <h2 style="text-align:center" class="mt-5"><u style="text-decoration-color:#ff4b6c;">Let's Understant This</u>
+        </h2>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class=" col-md-6">
                 <h4>About Form</h4>
-                <p>Give us best ideas for Improvment in our website Ghumo.jaipur</p>
+                <p class="explaintion" style="">Give us best ideas for Improvment in our website Ghumo.jaipur</p>
             </div>
-            <div class="logo1">
-                <img src="<?php echo base_url().'assets/images/logo.png' ?>" class=" " style="width:10rem;">
-            </div>
-        </div>
-
-        <div class="ditalis1 mt-5 righttextdiv">
-            <div>
-                <img src="<?php echo base_url().'assets/images/logo2.png' ?>" class="" style="width:10rem;">
-            </div>
-            <div class="about-form righttext">
-                <h4>Types Of Ideas</h4>
-                <p>Whatever you think should be improved in this thing or
-                    what type of thing should be done like this or along with this you can also give idea for the
-                    content in this site that put this type of news or this type of content pour</p>
+            <div class="logo1 col-md-6 text-center ">
+                <img src="<?php echo base_url() . 'assets/images/logo.png' ?>" class=" " style="width:12rem;">
             </div>
         </div>
     </div>
-    <footer class="bg-dark text-center text-white" style="height:50px;" >
-    <div class="footer" style="background-color:#343333; ">
-        <h3 style="color:white; text-align:center; text-decoration:underline;" class="pt-3">Thank You For Great Idea</h3>
-        <div class="text ml-5 mt-4" style="Display:flex;" >
-           <div class="ghumojaipurlogo"> <img src="<?php echo base_url().'assets/images/bg.png' ?>" class=" ml-0  " style="width:5rem; text-decoration:underline;" alt="error">
-           <p><span style="color:white;">Created by</span> <span style="color:#ff4b6c;">Enaicworld Media</span></p></div>
-           <div class="icons ml-auto">
-           <div class="socialmedialogo ml-4" style="text-align:center; display:block;">
-               <a href="#" class="fa fa-facebook mx-3 my-2" style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%; "></a>
-               <a href="#" class="fa fa-twitter mx-3"  style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
-               <a href="#" class="fa fa-youtube mx-3"  style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
-               <a href="#" class="fa fa-instagram mx-3" style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
-               <a href="#" class="fa fa-whatsapp mx-3" style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
+    <div class="container mt-5">
+        <div class="row mg-auto">
+            <div class="col-md-6 text-cente">
+
+                <img src="<?php echo base_url() . 'assets/images/logo2.png' ?>" class="" style="width:12rem;">
+
             </div>
-          
-               <div class="font">
-                   <ul class="fotternav " style="text-align:center;">
-                       <li class="nav-item" style="display:inline-block;">
-                           <a class="nav-link mr-3" style="color:white;" href="#">Home</a>
-                        </li>
-                       <li class="nav-item"style="display:inline-block;">
-                           <a class="nav-link mx-3" style="color:white;"href="#">Forts</a>
-                       </li>
-                       <li class="nav-item"style="display:inline-block;">
-                           <a class="nav-link mx-3" style="color:white;"href="#">Shopping</a>
-                       </li>
-                       <li class="nav-item"style="display:inline-block;">
-                           <a class="nav-link mx-3" style="color:white;"href="#">Transporation</a>
-                       </li>
-                   </ul>
-               </div>
+            <div class="col-md-6">
+                <h4>Types Of Ideas</h4>
+                <p class="explaintion">Whatever you think should be improved in this thing or
+                    what type of thing should be done like this or along with this you can also give idea for the
+                    content in this site that put this type of news or this type of content pour</p>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <footer class="bg-dark text-center text-white" style="height:50px;">
+        <div class="footer" style="background-color:#343333; ">
+            <h3 style="color:white; text-align:center; text-decoration:underline;" class="pt-3">Thank You For Great Idea
+            </h3>
+            <div class="text ml-5 mt-4" style="Display:flex;">
+                <div class="ghumojaipurlogo"> <img src="<?php echo base_url() . 'assets/images/bg.png' ?>"
+                        class=" ml-0  " style="width:5rem; text-decoration:underline;" alt="error">
+                    <p><span style="color:white;">Created by</span> <span style="color:#ff4b6c;">Enaicworld Media</span>
+                    </p>
+                </div>
+                <div class="icons ml-auto">
+                    <div class="socialmedialogo ml-4" style="text-align:center; display:block;">
+                        <a href="#" class="fa fa-facebook mx-3 my-2"
+                            style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%; "></a>
+                        <a href="#" class="fa fa-twitter mx-3"
+                            style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
+                        <a href="#" class="fa fa-youtube mx-3"
+                            style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
+                        <a href="#" class="fa fa-instagram mx-3"
+                            style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
+                        <a href="#" class="fa fa-whatsapp mx-3"
+                            style="color:white; border:1px solid white; width:40px; height:40px; line-height:38px; display:inline-block;text-align:center;border-radius:50%;"></a>
+                    </div>
+
+                    <div class="font">
+                        <ul class="fotternav " style="text-align:center;">
+                            <li class="nav-item" style="display:inline-block;">
+                                <a class="nav-link mr-3" style="color:white;" href="#">Home</a>
+                            </li>
+                            <li class="nav-item" style="display:inline-block;">
+                                <a class="nav-link mx-3" style="color:white;" href="#">Forts</a>
+                            </li>
+                            <li class="nav-item" style="display:inline-block;">
+                                <a class="nav-link mx-3" style="color:white;" href="#">Shopping</a>
+                            </li>
+                            <li class="nav-item" style="display:inline-block;">
+                                <a class="nav-link mx-3" style="color:white;" href="#">Transporation</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="last " style="color:white; text-align:center;">
+                <p class="pb-2">© 2023 Ghumo Jaipur. All rights reserved.</p>
             </div>
         </div>
-        <div class="last " style="color:white; text-align:center;"><p class="pb-2">© 2023 Ghumo Jaipur. All rights reserved.</p></div>
-</div>
-  </footer>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

@@ -6,7 +6,7 @@ class Home extends CI_Controller{
     $this->load->view('body');
     $this->load->view('common/footer');
  }
-public function dashboard(){
+ public function dashboard(){
    $this->load->view('dashboard');
 }
 

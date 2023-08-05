@@ -102,6 +102,9 @@ class User extends CI_Controller {
 
 		$this->session->set_flashdata('msg','Your details has been successfully saved');
 		redirect(base_url().'index.php/user/workwithus/');
-	   }
 	}
+ }
+ public function about_us(){
+	 $this->load->view('forms/about_us');
+ }
 }

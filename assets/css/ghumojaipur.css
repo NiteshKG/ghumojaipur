@@ -266,6 +266,50 @@ margin:0px;
 	width: 50%;
     margin: auto;
 }
+/* ............................volunteer section ............................. */
+.joinbox{
+    text-align: center;
+    padding: 20px 0px;
+}
+.volunteerstar{
+    text-align: center;
+    padding: 20px 0px;
+}
+.teamcard{
+    box-shadow: 0px 0px 8px rgb(0, 0, 0)!important;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(158, 156, 156);
+}
+body{
+    background:#eee;
+    /* margin-top:20px; */
+}
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+.volunteer{
+    /* text-align: center; */
+    padding: 20px 0px;
+}
+
 
 
 /* Responsive Styles */

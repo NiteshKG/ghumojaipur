@@ -27,7 +27,7 @@ class User extends CI_Controller {
 
 		$this->user_model->create($formArray);
 
-		$this->session->set_flashdata('msg','Your suggestion has been successfully recorded');
+		$this->session->set_flashdata('msg','Your Idea has been successfully saved');
 		redirect(base_url().'index.php/user/takeidea/');
 	   }
 	}

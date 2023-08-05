@@ -32,11 +32,11 @@ public function login_action() {
         );
         $this->session->set_userdata($userdata);
         
-        redirect(base_url().'index.php/admin/dashboard/index/');
+        redirect(base_url().'admin/dashboard/index/');
     } else {
        
         $this->session->set_flashdata('msg', 'Invalid username or password');
-        redirect(base_url().'index.php/admin/login/index/');
+        redirect(base_url().'admin/login/index/');
     }
 }
 else{
@@ -74,7 +74,7 @@ public function register_action()
 		$this->user_model->register($formArray);
 
 		$this->session->set_flashdata('msg','Your account has been successfully created');
-		redirect(base_url().'index.php/admin/login/index/');
+		redirect(base_url().'admin/login/index/');
 	   }
 	}
 

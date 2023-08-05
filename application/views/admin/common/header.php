@@ -95,8 +95,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="<?= base_url().'index.php/admin/login/login_action/' ?>">Login</a>
-                        <a class="collapse-item" href="<?= base_url().'index.php/admin/login/register/' ?>">Register</a>
+                        <a class="collapse-item" href="<?= base_url().'admin/login/login_action/' ?>">Login</a>
+                        <a class="collapse-item" href="<?= base_url().'admin/login/register/' ?>">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
@@ -108,19 +108,19 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url().'index.php/admin/dashboard/update/' ?>">
+                <a class="nav-link" href="<?= base_url().'admin/dashboard/update/' ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Updates about japur</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url().'index.php/admin/dashboard/index/' ?>">
+                <a class="nav-link" href="<?= base_url().'admin/dashboard/index/' ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>viewer's ideas</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url().'index.php/admin/dashboard/work/' ?>">
+                <a class="nav-link" href="<?= base_url().'admin/dashboard/work/' ?>">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Involved with us</span></a>
             </li>

@@ -48,7 +48,7 @@
                                       }
 
                                     ?>
-                                    <form action="<?php echo base_url().'index.php/admin/login/login_action/'; ?>" method="post" class="user">
+                                    <form action="<?php echo base_url().'admin/login/login_action/'; ?>" method="post" class="user">
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp"
@@ -76,7 +76,7 @@
                                         <a class="small" href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url().'index.php/admin/login/register/' ?>">Create an Account!</a>
+                                        <a class="small" href="<?= base_url().'admin/login/register/' ?>">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>

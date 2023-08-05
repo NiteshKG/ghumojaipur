@@ -11,10 +11,10 @@ class Dashboard extends CI_Controller {
         $this->load->model('user_model');
         $data['users']=$this->user_model->all();
        
-       // $this->load->view('admin/common/header');
-       // $this->load->view('admin/ideas',$data);
-       // $this->load->view('admin/common/footer');
-       echo json_encode($data);
+       $this->load->view('admin/common/header');
+       $this->load->view('admin/ideas',$data);
+       $this->load->view('admin/common/footer');
+    //    echo json_encode($data);
 
     }
 
@@ -47,8 +47,9 @@ class Dashboard extends CI_Controller {
     public function work(){ 
         $this->load->model('user_model');
         $data['users']=$this->user_model->involved();
-       
-          echo json_encode($data);
+        $this->load->view('admin/common/header');
+        $this->load->view('admin/get_involved',$data);
+        $this->load->view('admin/common/footer');
     }
     public function work_view(){
         $this->load->model('user_model');

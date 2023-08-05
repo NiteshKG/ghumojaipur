@@ -33,7 +33,7 @@
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
     <script>
-        fetch('<?php echo base_url(); ?>index.php/admin/dashboard/update/', {
+        fetch('<?php echo base_url(); ?>admin/dashboard/update/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

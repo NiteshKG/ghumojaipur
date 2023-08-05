@@ -26,7 +26,7 @@
                                     <div class="card-header justify-content-center"><h3 class="fw-light my-4">Create Account</h3></div>
                                     <div class="card-body">
                                         <!-- Registration form-->
-                                        <form method="post"  action="<?php echo base_url().'index.php/admin/login/register_action/'; ?>">
+                                        <form method="post"  action="<?php echo base_url().'admin/login/register_action/'; ?>">
                                             <!-- Form Row-->
                                             <div class="row gx-3">
                                                 <div class="col-md-6">

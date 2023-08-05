@@ -28,7 +28,7 @@ class User extends CI_Controller {
 		$this->user_model->create($formArray);
 
 		$this->session->set_flashdata('msg','Your Idea has been successfully saved');
-		redirect(base_url().'index.php/user/takeidea/');
+		redirect(base_url().'user/takeidea/');
 	   }
 	}
 
@@ -71,7 +71,7 @@ class User extends CI_Controller {
 		$this->user_model->update($formArray);
 
 		$this->session->set_flashdata('msg','Your information has been successfully saved');
-		redirect(base_url().'index.php/user/update/');
+		redirect(base_url().'user/update/');
 	   }
 	}
 
@@ -101,7 +101,7 @@ class User extends CI_Controller {
 		$this->user_model->work($formArray);
 
 		$this->session->set_flashdata('msg','Your details has been successfully saved');
-		redirect(base_url().'index.php/user/workwithus/');
+		redirect(base_url().'user/workwithus/');
 	   }
 	}
 }

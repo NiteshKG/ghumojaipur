@@ -78,7 +78,7 @@
             <h1>Jaipur Portal</h1>
             <p>खम्मा घणी</p>
             <div class="icondiv">
-                <a href="<?= base_url() . 'index.php/user/takeidea/' ?>">
+                <a href="<?= base_url() .'user/takeidea/' ?>">
                     <button class="idea">
                         <i class="icon fa fa-lightbulb-o" aria-hidden="true"></i>
                         <span class="button-text">Contribute Your Creative Ideas</span>
@@ -87,7 +87,7 @@
             </div>
 
             <div class="icondiv">
-                <a class="update-link" href="<?= base_url() . 'index.php/user/update/' ?>">
+                <a class="update-link" href="<?= base_url() .'user/update/' ?>">
                     <button class="update">
                         <i class="icon fa fa-building" aria-hidden="true"></i>
                         <span class="button-text">Contribute City Updates</span>
@@ -95,7 +95,7 @@
                 </a>
             </div>
             <div class="icondiv">
-                <a class="work-link" href="<?= base_url() . 'index.php/user/workwithus/' ?>">
+                <a class="work-link" href="<?= base_url() .'user/workwithus/' ?>">
                     <button class="work">
                         <i class="icon fa fa-users" aria-hidden="true"></i>
                         <span class="button-text">Work With Us</span>

@@ -268,17 +268,98 @@ margin:0px;
 }
 /* ............................volunteer section ............................. */
 .joinbox{
-    text-align: center;
+    /* text-align: center; */
     padding: 20px 0px;
+}
+.cardimg {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 45%;
+	background-image: linear-gradient(
+			rgba(239, 191, 191, 0.8),
+			rgba(239, 191, 191, 0.8)
+		),
+		url(..//images/download-_17_.jpg);
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+	box-shadow: 0px 0px 8px rgb(112, 112, 112)!important;
+	border-radius: 5px 5px 0px 0px;
+}
+
+
+.profile{
+	width: 80%;
+    margin: auto;
+}
+.teamcard h5 {
+	font-size: 15px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .row.text-center > div {
+        margin-bottom: 100px!important; /* Aap spacing ki value apne requirement ke hisab se adjust kar sakte hain */
+    }
+	.img-thumbnail{
+		position: absolute!important;
+		bottom: 26%!important;
+		right: 37%!important;
+	}
+}
+@media (max-width: 991px) {
+    .row.text-center > div {
+        margin-bottom: 110px!important; /* Aap spacing ki value apne requirement ke hisab se adjust kar sakte hain */
+    }
+	.img-thumbnail{
+		position: absolute;
+		bottom: 26%;
+		right: 33%;
+	}
+}
+@media (max-width: 575px) {
+	.img-thumbnail{
+		position: absolute!important;
+		bottom: 26%!important;
+		right: 37%!important;
+	}
+}
+@media (max-width: 430px) {
+	.img-thumbnail{
+		position: absolute!important;
+		bottom: 26%!important;
+		right: 30%!important;
+	}
 }
 .volunteerstar{
-    text-align: center;
+    /* text-align: center; */
     padding: 20px 0px;
 }
+.forjoin{
+	background-color: #FFD1DA;
+	margin: 10px 0px ;
+	padding: 20px 10px;
+}
+.forjoin p{
+	margin: 5px 0px 25px 0px;
+}
+.jointeam{
+	background-color: #FF4B6C;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    width: 131px;
+    margin: auto;							
+}
 .teamcard{
-    box-shadow: 0px 0px 8px rgb(0, 0, 0)!important;
+    box-shadow: 0px 0px 8px rgb(112, 112, 112)!important;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(158, 156, 156);
+    /* border: 1px solid rgb(158, 156, 156); */
+	border-radius: 0px 0px 5px 5px;
+	
 }
 body{
     /* background:#eee; */
@@ -291,19 +372,22 @@ body{
     border-radius: .25rem;
     max-width: 100%;
     height: auto;
+	position: absolute;
+    bottom: 26%;
+    right: 28%;
 }
 
 .social-link {
     width: 30px;
     height: 30px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
+    color: #e51f1f;
     border-radius: 50%;
     transition: all 0.3s;
-    font-size: 0.9rem;
+    font-size: 1.7rem;
 }
 .volunteer{
     /* text-align: center; */
@@ -316,7 +400,7 @@ body{
 
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.content h1 {
 		font-size: 24px;
 	}
@@ -328,6 +412,11 @@ body{
 	.button-container button {
 		flex: 1 0 100%;
 		margin-bottom: 10px;
+	}
+	.img-thumbnail{
+		position: absolute;
+		bottom: 29%;
+		right: 27%;
 	}
 }
 
@@ -368,6 +457,7 @@ body{
 		margin: auto;
 	}
 }
+
 @media (max-width: 386px) {
 	.idea,
 	.update,

@@ -89,7 +89,7 @@
     <div class="forjoin">
         <h3>Join Today!</h3>
         <p>Certainly! Are you ready to leave your mark on the Ghumo Jaipur saga? Ghumo Jaipur seeks more Protagonists such as visionary artists, maverick writers, and sonic storytellers. Join us today and become a part of our creative cast. The stage is set, and the spotlight is waiting for you!</p>
-        <a href="" class="jointeam">Join our team</a>
+        <a href="<?= base_url() .'workwithus' ?>" class="jointeam">Join our team</a>
     </div>
 </div>
 <div class="container">

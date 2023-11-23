@@ -257,6 +257,7 @@ img{
     padding: 9px 18px!important;
 
 }
+
 .btngo{
     color: white!important;
     font-weight: bold!important;
@@ -359,15 +360,36 @@ img{
     border-radius: 5px;
     box-shadow: 0px 0px 12px rgb(0, 0, 0,0.5);
 }
-.location{
+.location1{
     color: white;
     background-color: #FF4B6C;
     max-width: max-content;
     position: absolute;
     padding: 0px 10px;
     /* left: 10%; */
-    top: 10%;
+    top: 5%;
     /* border-radius: 10px; */
+}
+.palacename{
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    bottom: 20px;
+    position: absolute;
+    left: 10px;
+}
+.stars{
+    position: absolute;
+    bottom: 8px;
+    left: 6px;
+    display: flex;
+}
+.fa-star{
+    padding: 0px 5px!important;
+}
+.palacename h5 {
+    font-family: 'Karma', serif;
+    /* font-weight: 600; */
 }
 .img2{
     background-color: #ff0000;
@@ -380,14 +402,14 @@ img{
     border-radius: 5px;
     box-shadow: 0px 0px 12px rgb(0, 0, 0,0.5);
 }
-.location{
+.location2{
     color: white;
     background-color: #FF4B6C;
     max-width: max-content;
     position: absolute;
     padding: 0px 10px;
     /* left: 10%; */
-    top: 10%;
+    top: 5%;
     /* border-radius: 10px; */
 }
 .img3{
@@ -402,7 +424,7 @@ img{
     border-radius: 5px;
     box-shadow: 0px 0px 12px rgb(0, 0, 0,0.5);
 }
-.location{
+.location3{
     color: white;
     background-color: #FF4B6C;
     max-width: max-content;
@@ -423,7 +445,7 @@ img{
     border-radius: 5px;
     box-shadow: 0px 0px 12px rgb(0, 0, 0,0.5);
 }
-.location{
+.location4{
     color: white;
     background-color: #FF4B6C;
     max-width: max-content;
@@ -465,5 +487,15 @@ img{
         width: 100%;
     }.col-lg-5 .row {
         display: flex!important;
+    }
+}
+@media (max-width:575px) {
+    .img1{
+        height: 600px;
+    max-height: 700px;
+    }
+    .img2{
+        height: 600px;
+    max-height: 700px;
     }
 }

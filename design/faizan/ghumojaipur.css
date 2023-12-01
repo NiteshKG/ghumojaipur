@@ -220,6 +220,12 @@ img{
   
 }
 /* ........................................home page css .................................... */
+.navbar-light .navbar-toggler {
+    border: 1px solid white!important;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")!important;
+}
 .myimg{
     position: unset!important;
 }
@@ -266,8 +272,18 @@ img{
     justify-content: center!important;
     padding: 5.1px 5px 5.1px 10px!important;
 }
+.btngos{
+    color: white!important;
+    font-weight: bold!important;
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    padding: 5.1px 22px 5.1px 13px!important;
+}
 .galleryhead h3 {
-    margin-bottom: 10px; /* Adjust the value as needed for the desired space */
+    margin-bottom: 10px;
+    font-family: 'Inknut Antiqua', serif;
+    /* Adjust the value as needed for the desired space */
   }
    .galleryhead h3:after {
     content: '';
@@ -349,16 +365,19 @@ img{
     width: 62%!important;
 }
 .img1{
-    background-color: #000000;
     border: 1px solid white;
     height: 422px;
     max-width: 100%;
-    background-image: url(./images/pexels-photo-917510.jpeg);
     background-size: cover;
     position: relative;
     border: 8px solid white;
     border-radius: 5px;
     box-shadow: 0px 0px 12px rgb(0, 0, 0,0.5);
+}
+.citygallry{
+    width: 100%!important;
+    position: unset!important;
+    height: 100%!important;
 }
 .location1{
     color: white;
@@ -395,7 +414,6 @@ img{
     background-color: #ff0000;
     border: 1px solid white;
     height: 422px;
-    background-image: url(./images/pexels-photo-917510.jpeg);
     background-size: cover;
     position: relative;
     border: 8px solid white;
@@ -417,7 +435,6 @@ img{
     border: 1px solid white;
     height: 200px;
     width: 100%;
-    background-image: url(./images/download\ \(13\).jpg);
     background-size: cover;
     position: relative;
     border: 8px solid white;
@@ -438,7 +455,6 @@ img{
     background-color: #ff0000;
     border: 1px solid white;
     height: 200px;
-    background-image: url(./images/download\ \(13\).jpg);
     background-size: cover;
     position: relative;
     border: 8px solid white;
@@ -455,6 +471,245 @@ img{
     top: 10%;
     /* border-radius: 10px; */
 }
+.cardhead{
+    display: flex;
+    justify-content: center;
+}
+.cardhead h3{
+    font-family: 'Inknut Antiqua', serif;
+    border-bottom:3px solid #ff0000;
+    height: 42px;
+}
+.card1{
+    /* height: 370px; */
+    width: 100%;
+}
+.card2{
+    /* height: 370px; */
+    width: 100%;
+}
+.card3{
+    /* height: 370px; */
+    width: 100%;
+}
+.card4{
+    /* height: 370px; */
+    width: 100%;
+}
+.packagescard{
+    /* background-color: red; */
+    /* position: absolute; */
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(193, 191, 191);
+}
+.packagescard:hover{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+}
+.cardimages{
+    position: unset!important;
+}
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff4b6c' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")!important
+    ;
+    color: #FF4B6C;
+}
+.carousel-control-prev-icon{
+    background-image: 
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff4b6c' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")!important;
+}
+.packageprice{
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    background-color: #FF4B6C;
+    /* width: 31%; */
+    color: white;
+    text-align: center;
+    display: flex;
+}
+.citylocation{
+    display: flex;
+    background-color: #FF4B6C;
+    position: absolute;
+    z-index: 2;
+    height: 30px;
+    /* width: 73%; */
+    bottom: -13px;
+    left: 29px;
+}
+.fa-clock:before{
+    font-size: 13px!important;
+}
+.fa-person:before {
+    font-size: 13px!important;
+}
+.fa-location-dot:before{
+    font-size: 13px!important;
+}
+.Placename h5{
+    font-family: 'Karma', serif!important;
+    font-weight: bolder;
+    padding: 20px 12px 0px 12px;
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+hr{
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+}
+.tripdetail{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 17px;
+
+}
+.tripdetail1{
+    display: flex;
+}
+.tripdetail1 p{
+    font-size: 10.5px!important;
+    margin-bottom: 0px!important;
+    margin-top: 2px;}
+.tripdetail2 p{
+    font-size: 10.5px!important;
+    margin-bottom: 0px!important;
+    margin-top: 2px;}
+.tripdetail2{
+    display: flex;
+}
+.right{
+    justify-content: left!important;
+    height: 17px!important;
+    width: 24%!important;
+}
+.morepackages{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.users{
+    justify-content: space-around;
+    margin: 40px 0px;
+}
+.user1{
+    border: 3px solid #FF4B6C;
+    padding: 36px 8px;
+    border-radius: 100px;
+}
+.user1:hover{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1.5);
+
+}
+.user2:hover{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1.5);
+
+}
+.user3:hover{
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1.5);
+
+}
+.user1 p{
+    margin-bottom: 0px!important;
+    font-weight: bolder;
+
+}
+.user2{
+    border: 3px solid #FF4B6C;
+    padding: 36px 35px;
+    border-radius: 100px;
+}
+.user2 p{
+    margin-bottom: 0px!important;
+    font-weight: bolder;
+
+}
+.user3{
+    border: 3px solid #FF4B6C;
+    padding: 36px 9px;
+    border-radius: 100px;
+}
+.user3 p{
+    margin-bottom: 0px!important;
+    font-weight: bolder;
+
+}
+.contenthead{
+    display: flex;
+    justify-content: center;
+}
+.contenthead h3{
+     
+        font-family: 'Inknut Antiqua', serif;
+        border-bottom:3px solid #ff0000;
+        height: 42px;
+    
+}
+.contentcard{
+    background-color: #F0F0F0;
+    width: 100%;
+    /* height: 100px; */
+    cursor: pointer;
+}
+.contentcard:hover{
+    background-color: #FF4B6C;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+    color: white;
+}
+.contentimg{
+    text-align: center;
+    padding: 28px 0px 26px 0px;
+}
+.contentimg img{
+    position: unset!important;
+    margin: 15px 0px;
+    width: 27%;
+    /* height: 7vh; */
+}
+.contentheading{
+    padding: 14px 0px 30px 0px;
+}
+.contentheading h5{
+    font-family: 'Inknut Antiqua', serif;
+
+}
+.contentheading h5:hover{
+    color:white;
+}
+.abouthead{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.abouthead h3{
+     
+        font-family: 'Inknut Antiqua', serif;
+        border-bottom:3px solid #ff0000;
+        height: 42px;
+    
+}
+.aboutimg{
+    position: unset!important;
+    border-radius: 10px!important;
+}
+.aboutheading{
+    display: flex;
+    margin: 15px 0px;
+}
+.aboutheading h3{
+    font-family: 'Inknut Antiqua', serif;
+        border-bottom:3px solid #ff0000;
+        height: 42px;
+        font-size: 20px;
+}
+.childhead h1{
+    font-family: 'Karma', serif!important;
+    font-weight: 900;
+}
+.childhead p{
+    text-align: justify;
+}
 /* mediaqueris of home page */
 @media (max-width:767px){
     .formtext{
@@ -462,6 +717,18 @@ img{
     }
     .planforjaipur h2{
         font-size: 20px!important;
+    }
+    .contenthead h3{
+        font-size: 20px!important;
+    }
+    .cardhead h3{
+        font-size: 20px!important;
+    }
+    .abouthead h3{
+        font-size: 20px!important;
+    }
+    .childhead h1{
+        font-size: 27px!important;
     }
     .dosuggestion{
         font-size: 17px!important;
@@ -473,6 +740,9 @@ img{
     .planforjaipur h2{
         margin-top: 25px; 
         height: 40px!important;
+    }
+    .cardhead h3 {
+        height: 30px;
     }
     .form{
         width: 100%!important;
@@ -497,5 +767,54 @@ img{
     .img2{
         height: 600px;
     max-height: 700px;
+    }
+    .galleryhead h3 {
+        font-size: 19px;
+    }
+    .cardhead h3{
+        font-size: 19px;
+    }
+}
+@media (min-width:992px) and (max-width:1199px){
+    .citylocation{
+        left: 7px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .citylocation{
+        left: 59px;
+    }
+}
+@media (min-width:576px) and (max-width:767px){
+    .citylocation{
+        left: 17px;
+    }
+}
+@media (min-width:280px) and (max-width:575px){
+    .citylocation{
+        bottom: -13px!important;
+    left: 50px;
+}
+}
+@media (min-width:280px) and (max-width:467px){
+    .users{
+        display: block!important;
+        width: max-content!important;
+        margin: auto!important;
+    }
+    .user1{
+        margin: 30px 0px;
+    }
+    .user2{
+        margin: 30px 0px;
+    }
+    .user3{
+        margin: 30px 0px;
+    }
+    .contentheading h5{
+        font-size: 16px!important;
+    }
+    .aboutimg{
+        width: 100%!important;
     }
 }

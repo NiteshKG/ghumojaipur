@@ -1350,6 +1350,47 @@ hr {
 	font-family: "Inknut Antiqua", serif;
 	color: #ff4b6c!important;
 }
+.details_list{
+	position: relative;
+	z-index: 1;
+	    width: 92%;
+    /* justify-content: center; */
+    margin: auto;
+	overflow: hidden;
+}
+.listitem{
+	display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style: none;
+	padding-left: 0rem!important;
+	transition: transform 0.5s ease-in-out;
+}
+
+.listitem li {
+	flex: 0 0 33.33%;
+	background-color: #ff4b6c;
+	text-align: center;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.slider-buttons {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	transform: translateY(-50%);
+}
+
+.slider-button {
+	background-color: #fff;
+	color: #ff4b6c;
+	border: 1px solid #ff4b6c;
+	padding: 5px 10px;
+	cursor: pointer;
+}
 @media (min-width: 768px) and (max-width: 991px) {
 	.text h1{
 		font-size: 25px!important;

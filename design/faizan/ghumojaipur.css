@@ -1317,3 +1317,51 @@ hr {
 		font-size: 15px !important;
 	}
 }
+/* ..............trip details page.......... */
+.tripimages{
+	max-height: 24.9375vw !important;
+    max-width: 100vw !important;
+}
+.overlay {
+    position: relative;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.text {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    
+    /* Add any additional styling for your text */
+}
+.text h1{
+	font-family: "Inknut Antiqua", serif;
+	color: #ff4b6c!important;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.text h1{
+		font-size: 25px!important;
+	}
+}
+@media (min-width: 445px) and (max-width: 767px) {
+	.text h1{
+		font-size: 18px!important;
+	}
+}
+@media (min-width: 280px) and (max-width: 444px) {
+	.text h1{
+		font-size: 14px!important;
+	}
+}
